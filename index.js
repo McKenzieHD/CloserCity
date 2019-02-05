@@ -9,6 +9,7 @@ bot.on('ready', function () {
     bot.user.setActivity('rien').catch(console.error)
 });
 
+bot.login(cfg.token);
 bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
         return channel.send('Bienvenue sur le serveur de Alexpgm' + member.displayName)
